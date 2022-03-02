@@ -1,8 +1,8 @@
-module TimeIntervalTests
+module TimeDurationTests
 
 open System
 open Xunit
-open KlienLib.TimeIntervals
+open FerrisTime.TimeDuration
 
 let shouldBeSome value =
     match value with

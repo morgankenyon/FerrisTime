@@ -1,10 +1,10 @@
-﻿namespace KlienLib
+﻿namespace FerrisTime
 
 module Say =
     let hello name =
         printfn "Hello %s" name
 
-module TimeIntervals =
+module TimeDuration =
     open FParsec
     type Interval = { Hours: int }
 

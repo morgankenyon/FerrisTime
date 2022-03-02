@@ -5,7 +5,7 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TimeIntervalTests.fs" />
+    <Compile Include="TimeDurationTests.fs" />
     <Compile Include="Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
@@ -22,6 +22,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\KlienLib.fsproj" />
+    <ProjectReference Include="..\src\FerrisTime.fsproj" />
   </ItemGroup>
 </Project>
