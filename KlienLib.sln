@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "KlienLib", "src\KlienLib.fsproj", "{4FD9CABB-90FC-4220-A7AD-EF2A828C8D48}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "KlienLib.Test", "test\KlienLib.Test.fsproj", "{0ABC3B06-F219-4332-BCDB-E742BD648901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FD9CABB-90FC-4220-A7AD-EF2A828C8D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD9CABB-90FC-4220-A7AD-EF2A828C8D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD9CABB-90FC-4220-A7AD-EF2A828C8D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD9CABB-90FC-4220-A7AD-EF2A828C8D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABC3B06-F219-4332-BCDB-E742BD648901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABC3B06-F219-4332-BCDB-E742BD648901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABC3B06-F219-4332-BCDB-E742BD648901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABC3B06-F219-4332-BCDB-E742BD648901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
