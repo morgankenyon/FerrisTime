@@ -1,5 +1,7 @@
 # FerrisTime
 
+![](https://img.shields.io/nuget/v/FerrisTime)
+
 A simple library for parsing and extracting time durations from strings.
 
 ## Examples
