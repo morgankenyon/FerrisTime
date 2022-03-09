@@ -22,9 +22,9 @@ let hourParse = parse "20h"
 let minuteParse = parse "60m"
 //Ok { Days = 0; Hours = 0; Minutes = 60 }
 
-let minuteParse = parse "1d 3h 60m"
+let allParse = parse "1d 3h 60m"
 //Ok { Days = 1; Hours = 3; Minutes = 60 }
 
 let badParse = parse "23"
-//Error "'23' cannot be parsed
+//Error "'23' cannot be parsed"
 ```
