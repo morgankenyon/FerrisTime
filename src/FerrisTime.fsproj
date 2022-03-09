@@ -1,8 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>FerrisTime</PackageId>
+    <Title>FerrisTime</Title>
+    <Version>0.1.0</Version>
+    <Authors>Morgan Kenyon</Authors>
+    <Description>A simple library for parsing and extracting time durations from strings.</Description>
+    <Summary>A simple library for parsing and extracting time durations from strings.</Summary>
+    <PackageProjectUrl>https://github.com/morgankenyon/FerrisTime</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/morgankenyon/FerrisTime.git</RepositoryUrl> 
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>time,duration,time parsing</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © Morgan Kenyon 2022</Copyright>
+    <!-- <PackageReadmeFile>README.md</PackageReadmeFile> -->
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>

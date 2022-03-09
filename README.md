@@ -1,6 +1,6 @@
 # FerrisTime
 
-A small library for parsing and extracting time durations from strings.
+A simple library for parsing and extracting time durations from strings.
 
 ## Examples
 
@@ -24,7 +24,6 @@ let minuteParse = parse "60m"
 
 let minuteParse = parse "1d 3h 60m"
 //Ok { Days = 1; Hours = 3; Minutes = 60 }
-
 
 let badParse = parse "23"
 //Error "'23' cannot be parsed
