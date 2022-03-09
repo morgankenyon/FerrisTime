@@ -13,20 +13,29 @@ module TimeDuration =
     | Hour of int
     | Minute of int
 
-    let pday = pint32 .>> (pchar 'd' <|> pchar 'D') |>> fun x -> Day(x)
-    let phour = pint32 .>> (pchar 'h' <|> pchar 'H') |>> fun x -> Hour(x)
-    let pminute = pint32 .>> (pchar 'm' <|> pchar 'M') |>> fun x -> Minute(x)
+    let ws = spaces
+    let pday = ws >>. pint32 .>> (pchar 'd' <|> pchar 'D') |>> fun x -> Day(x)
+    let phour = ws >>. pint32 .>> (pchar 'h' <|> pchar 'H') |>> fun x -> Hour(x)
+    let pminute = ws >>. pint32 .>> (pchar 'm' <|> pchar 'M') |>> fun x -> Minute(x)
     let attemptDay = attempt pday
     let attemptHour = attempt phour
     let attemptMinute = attempt pminute
     let pduration = attemptDay <|> attemptHour <|> attemptMinute
+    let manyduration = many1 pduration
     
+    let buildDuration results = 
+        let mutable duration = { Days = 0; Hours = 0; Minutes = 0 }
+        for r in results do
+            duration <-
+                match r with
+                | Day d -> { duration with Days = d }
+                | Hour h -> { duration with Hours = h }
+                | Minute m -> { duration with Minutes = m }
+        duration
+
     let parse (value: string): Result<Interval, string> =
-        let result = run pduration value
+        let result = run manyduration value
         match result with 
         | Success (u, _, _) -> 
-            match u with 
-            | Day d -> Core.Result<_,_>.Ok { Days = d; Hours = 0; Minutes = 0 }
-            | Hour h -> Core.Result<_,_>.Ok { Days = 0; Hours = h; Minutes = 0 }
-            | Minute m -> Core.Result<_,_>.Ok { Days = 0; Hours = 0; Minutes = m }
+            buildDuration u |> Core.Result<_,_>.Ok 
         | Failure (_, _, _) -> Core.Result<_,_>.Error $"'{value}' cannot be parsed"
