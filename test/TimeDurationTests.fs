@@ -2,7 +2,7 @@ module TimeDurationTests
 
 open System
 open Xunit
-open FerrisTime.TimeDuration
+open FerrisTime.Duration
 
 let shouldBeSome value =
     match value with

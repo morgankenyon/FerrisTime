@@ -1,10 +1,6 @@
 ﻿namespace FerrisTime
 
-module Say =
-    let hello name =
-        printfn "Hello %s" name
-
-module TimeDuration =
+module Duration =
     open FParsec
     type Interval = { Days: int; Hours: int; Minutes: int }
 
@@ -23,7 +19,7 @@ module TimeDuration =
     let pduration = attemptDay <|> attemptHour <|> attemptMinute
     let manyduration = many1 pduration
     
-    let buildDuration results = 
+    let buildDuration results =
         let mutable duration = { Days = 0; Hours = 0; Minutes = 0 }
         for r in results do
             duration <-
